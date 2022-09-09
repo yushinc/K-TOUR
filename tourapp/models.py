@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Search(models.Model):
     region = models.CharField(max_length=30)
 
-#게시물 모델
+# (최유신) 게시글 작성 모델
 class Post(models.Model):
     title = models.CharField(max_length = 200)
     body = models.TextField()
@@ -15,7 +15,7 @@ class Post(models.Model):
     def __str__(self): #게시글 제목
         return self.title
 
-#게시물 댓글    
+# (최유신) 댓글 작성 모델  
 class Comment(models.Model):
     comment = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
