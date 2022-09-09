@@ -38,10 +38,10 @@ def festivaldetail(request):
 
 
 
-# 게시판   
+# (최유신) 게시판 페이징
 def board(request):
     posts = Post.objects.filter().order_by('-date')
-    paginator = Paginator(posts, 5)
+    paginator = Paginator(posts, 5) # 한페이지에 게시글 5개씩
     pagenum = request.GET.get('page')
     posts = paginator.get_page(pagenum)
     return render(request, 'board.html', {'posts':posts})
@@ -52,7 +52,7 @@ def detail(request, post_id):
     comment_form = CommentForm()
     return render(request, 'post_detail.html', {'post_detail':post_detail, 'comment_form':comment_form})
 
-
+# (최유신) 게시글 작성 (로그인 하지않아도 가능)
 def postcreate(request):
     # request method가 POST 일 경우
     if request.method == 'POST':
@@ -69,6 +69,7 @@ def postcreate(request):
         form = PostForm()
     return render(request, 'post_form.html', {'form':form})
 
+# (최유신) 댓글 작성 (로그인 필요)
 def comment(request, post_id):
     filled_form = CommentForm(request.POST)
     if filled_form.is_valid():
