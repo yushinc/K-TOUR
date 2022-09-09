@@ -4,20 +4,13 @@ myproject > manage.py 에서 우클릭하여 터미널을 켭니다.
 
 <br>
 
-pip install django
-
+pip install django 
 <br>
-
 django를 설치하고,
-
 <br>
-
 python manage.py runserver
-
 <br>
-
 를 통해 서버를 실행시키면 됩니다.
-
 
 <br>
 myproject > accounts 
