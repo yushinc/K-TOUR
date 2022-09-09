@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 def mypage(request):
     return render(request, 'page.html')
 
+# (최유신) 로그인 함수
 def login(request):
     if request.method == "POST":
         username = request.POST["username"]
@@ -19,11 +20,12 @@ def login(request):
     else:
         return render(request, 'login.html')
 
-
+# (최유신) 로그아웃 함수
 def logout(request):
     auth.logout(request)
     return redirect('home')
 
+# (최유신) 회원가입 
 def signup(request):
     if request.method == "POST":
         if request.POST['password'] == request.POST['repeat']:
