@@ -1,6 +1,7 @@
 from django import forms
 from .models import Post, Comment
 
+# (최유신) 게시글 작성 폼 레이블
 class PostForm(forms.Form):
     title = forms.CharField()
     body = forms.CharField(widget=forms.Textarea)
@@ -23,7 +24,9 @@ class PostForm(forms.Form):
     #         'rows': 20,
     #         'cols' : 100
     #     }
-        
+       
+
+# (최유신) 댓글 작성 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
