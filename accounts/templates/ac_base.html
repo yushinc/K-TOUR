@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>K-TOUR</title>
+
+     <!-- Favicons -->
+    <link href="{% static 'images/TaeguekLogo.png' %}" rel="icon">
+
+    <!-- CSS 파일 링크 -->
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- font awesome 아이콘 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- JS 파일 링크 -->
+    <script src="{% static 'js/script.js' %}"></script>
+    
+
+</head>
+<body>
+
+     <!-- 헤더 -->
+
+     <header class="header">
+        <div class="header-1"> 
+            
+            <!-- 검색창--> 
+            <a href="{% url 'home' %}" class="logo"><img src="{% static 'images/TaeguekLogo.png' %}">K-TOUR</a>
+
+            <form action="{% url 'search' %}" method="POST" class="search-form">
+                {% csrf_token %}
+                {{ form.as_table }}
+                <input type="search" name="searched" placeholder="여행지를 검색해보세요!" id="search-box" value="{{searched}}">
+                <!--<label for="search-box" class="fas fa-search"></label>-->
+                <button type="submit" id="search-box">
+                    <i class="fas fa-search">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                </button>
+            </form>
+
+            <!--로그인 버튼 영역 -->
+            <div class="login">
+                {% if user.is_authenticated %}  
+                <span class="font">{{user.username}}님, 환영합니다.&nbsp;&nbsp;</span>
+                <button type="submit" id="login-btn">
+                    <a href="{% url 'logout' %}" class="fas fa-user"></a>
+                </button>
+
+                {% else %}
+                <span class="font">로그인&nbsp;&nbsp;</span>
+                <button type="submit" id="login-btn">
+                    <a href="{% url 'login' %}" class="fas fa-user"></a>
+                </button>
+
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="header-2"> <!-- 네비게이션 바 영역-->
+            <nav class="navbar">
+                <a href="{% url 'home' %}">홈</a> 
+                <a href="{% url 'region' %}">지역</a>
+                <a href="{% url 'festival' %}">축제</a>
+                <a href="{% url 'board' %}">게시판</a>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>

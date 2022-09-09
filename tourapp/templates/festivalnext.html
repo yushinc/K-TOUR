@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+   <!-- 축제 페이지-->
+    <section class="festival" id="festival">
+        <div class= "festivalheader">
+            <img src="{% static 'images/festivalheader.jpg' %}">
+        </div>
+        
+        <div class="text3">
+            <h3>축제</h3>
+        </div>
+
+        <div class="select">
+            <button class="select-now" type="button" onclick="location.href='/festival'">개최중</button>
+            <button class="select-next" type="button" onclick="location.href='/festivalnext'" style="background-color: var(--btn-darker); color: #d7fff1;">개최예정</button>
+            <button class="select-pre" type="button" onclick="location.href='/festivalpre'">개최완료</button>
+        </div>
+    
+            <div id="posters-group1" class="posters-list">
+                    <li><img src="{% static 'poster/next1.png' %}"><span1>─────<br></span1><span>2022 Beer Fest Gwangju<br>2022.08.31 ~ 2022.09.05</span></li>
+                    <li><img src="{% static 'poster/next2.jpg' %}"><span1>─────<br></span1><span>인천 펜타포트 락페스티벌<br>2022.08.05 ~ 2022.08.07</span></li>
+                    <li><img src="{% static 'poster/next3.jpg' %}"><span1>─────<br></span1><span>SEOUL FESTA 2022<br>2022.08.10 ~ 2022.08.14</span></li>
+                    <li><img src="{% static 'poster/next4.jpg' %}"><span1>─────<br></span1><span>제3회 섬의날<br>2022.08.08 ~ 2022.08.14</span></li>
+                    <li><img src="{% static 'poster/next5.jpg' %}"><span1>─────<br></span1><span>2022 성주생명문화축제<br>2022.08.05 ~ 2022.08.14</span></li>
+                    <li><img src="{% static 'poster/next6.jpg' %}"><span1>─────<br></span1><span>제32회 나라꽃 무궁화 전국축제<br>2022.08. 10 ~ 2022.08.15</span></li>
+                    <li><img src="{% static 'poster/next7.jpg' %}"><span1>─────<br></span1><span>2022 피란수도 부산 문화제야행<br>2022.08.19 ~ 2022.08.20</span></li>
+                    <li><img src="{% static 'poster/next8.jpg' %}"><span1>─────<br></span1><span>2022 창녕문화재야행<br>2022.08.19 ~ 2022.08.21</span></li>
+                    <li><img src="{% static 'poster/next9.jpg' %}"><span1>─────<br></span1><span>부산국제광고제<br>2022.10.30 ~ 2022.10.31</span></li>
+                    <li><img src="{% static 'poster/next10.jpg' %}"><span1>─────<br></span1><span>새만금 K-POP festival<br>2022.10.30 ~ 2022.10.31</span></li>
+                    <li><img src="{% static 'poster/next11.jpg' %}"><span1>─────<br></span1><span>제23회 서울국제여성영화제<br>2022.08.26 ~ 2022.09.01</span></li>
+                    <li><img src="{% static 'poster/next12.jpg' %}"><span1>─────<br></span1><span>고창갯벌축제<br>2022.08.05 ~ 2022.08.07</span></li>
+            </div>
+    </section>
+    
+    {% endblock %}

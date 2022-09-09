@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- 축제 페이지-->
+        
+<section class="festival" id="festival">
+    <div class= "festivalheader">
+        <img src="{% static 'images/festivalheader.jpg' %}">
+    </div>
+    
+    <div class="text3">
+        <h3>축제</h3>
+    </div>
+
+    <div class="select">
+        <button class="select-now" type="button" onclick="location.href='/festival'"  style="background-color: var(--btn-darker); color: #d7fff1;">개최중</button>
+        <button class="select-next" type="button" onclick="location.href='/festivalnext'">개최예정</button>
+        <button class="select-pre" type="button" onclick="location.href='/festivalpre'">개최완료</button>
+    </div>
+
+        <div id="posters-group1" class="posters-list">
+                <li><a href="/festivaldetail"><img src="{% static 'poster/now1.jpg' %}"></a><span1>─────<br></span1><span>제15회 정남진 장흥 물축제<br>2022.07.30 ~ 2022.08.07</span></li>
+                <li><img src="{% static 'poster/now2.jpg' %}"><span1>─────<br></span1><span>제24회 봉화 은어축제<br>2022.07.30 ~ 2022.08.07</span></li>
+                <li><img src="{% static 'poster/now4.jpg' %}"><span1>─────<br></span1><span>해비치 스타라이트 드론쇼<br>2022.07.23 ~ 2022.08.06</span></li>
+                <li><img src="{% static 'poster/now3.jpg' %}"><span1>─────<br></span1><span>2022 보령 해양 머드 박람회<br>2022.07.16 ~ 2022.08.15</span></li>
+                <li><img src="{% static 'poster/now5.png' %}"><span1>─────<br></span1><span>제7회 한강·낙동강 발원지 축제<br>2022.07.29 ~ 2022.08.07</span></li>
+                <li><img src="{% static 'poster/now6.png' %}"><span1>─────<br></span1><span>제26회 부산바다축제<br>2022.07.30 ~ 2022.08.07</span></li>
+                <li><img src="{% static 'poster/now7.jpg' %}"><span1>─────<br></span1><span>2022 합천 바캉스축제<br>2022.07.30 ~ 2022.08.07</span></li>
+                <li><img src="{% static 'poster/now8.jpg' %}"><span1>─────<br></span1><span>제13회 서울 청소년 연극축제<br>2022.08.02 ~ 2022.08.13</span></li>
+                <li><img src="{% static 'poster/now9.jpg' %}"><span1>─────<br></span1><span>한강페스티벌<br>2022.07.29 ~ 2022.08.15</span></li>
+                <li><img src="{% static 'poster/now10.jpg' %}"><span1>─────<br></span1><span>2022 달밤소풍<br>2022.07.01 ~ 2022.08.15</span></li>
+                <li><img src="{% static 'poster/now11.jpg' %}"><span1>─────<br></span1><span>2022 허브아일랜드 라벤더축제<br>2022.07.03 ~ 2022.08.31</span></li>
+                <li><img src="{% static 'poster/now12.jpg' %}"><span1>─────<br></span1><span>2022 향기샤워축제<br>2022.07.16 ~ 2022.10.31</span></li>
+        </div>
+</section>
+
+{% endblock %}

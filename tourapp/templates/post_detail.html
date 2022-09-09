@@ -1,0 +1,80 @@
+{% extends 'p_base.html' %}
+{% load static %}
+{% block content %}
+<section class="reviewboard">
+    <div class="page-title">
+        <div class="container">
+            <h3>익명 게시판</h3>
+        </div>
+    </div>
+
+
+    <!-- board post area -->
+    
+
+    <div id="board-list">
+    
+        <section class="article-detail table-common con row">
+            <table class="cell" border="1">
+                <colgroup>
+                    <col width="100px">
+                </colgroup>
+                <tbody>
+                    <tr class="article-title">
+                        <th>제목</th>
+                        <td colspan="3">{{ post_detail.title }}</td>
+                    </tr>
+                    <tr class="article-info">
+                        <th>날짜</th>
+                        <td>{{ post_detail.date}}</td>
+                        <th>작성자</th>
+                        <td>익명</td>
+                    </tr>
+                    <tr class="article-body">
+                        <th>본문</th>
+                        <td colspan="4">{{ post_detail.body }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="con reply">
+            <h2>댓글</h2><br>
+            {% if post_detail.comment_set.count > 0 %}
+            <ul>
+                <li>{{ post_detail.comment_set.count }} 개의 댓글이 있습니다.
+
+            </ul>
+            {% endif %}
+            <br>
+            <section class="reply-form">
+                <form method="POST" action="{% url 'comment' post_detail.id  %}">
+                    {% csrf_token %}
+                    <div>
+                        {{ comment_form }}
+                        <input type="submit" value = "댓글 달기">
+                    </div>
+                </form>
+            </section>
+
+
+            <section class="reply-list table-common">
+                <table border="1">
+                    <colgroup>
+                        <col width="100px">
+                    </colgroup>
+                    <tbody>
+                        {% for comment in post_detail.comment_set.all %}
+                        <tr>
+                        <td>익명</td>
+                        <td>{{ comment }}</td>
+                        </tr>
+                        <hr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}

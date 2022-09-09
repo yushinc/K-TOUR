@@ -1,0 +1,316 @@
+{% extends 'ac_base.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="banner" id="banner">
+        <h1>제주</h1>
+    </section>
+
+
+    <section class="travel-course">
+        <h3 class="region-heading">여행 코스</h3>
+
+        <!-- tab 메뉴 형식으로 여행 기간별 추천 코스 분류할 수 있게 함 -->
+
+        <div class="tab-area">
+            <input type="radio" name="tabs" id="tab1" checked>
+            <label for="tab1">전체</label>
+            <div class="divider">|</div>
+            <input type="radio" name="tabs" id="tab2">
+            <label for="tab2">당일 여행</label>
+            <div class="divider">|</div>
+            <input type="radio" name="tabs" id="tab3">
+            <label for="tab3">1박 2일</label>
+            <div class="divider">|</div>
+            <input type="radio" name="tabs" id="tab4">
+            <label for="tab4">2박 3일 이상</label>
+
+            <div id="content1" class="tab-content info">
+                <div class="course-box">
+                    <h4>제주도 세계자연유산 탐방 코스</h4>
+                    <p>제주도의 절묘한 자연경관과 특별한 맛을 느낄 수 있는 여행이다. 
+                    세계자연유산으로 등재된 만장굴과 돌과 더불어 살아 사는 제주인의 삶이 오롯이 녹아든 
+                    제주돌문화공원을 방문하고, 제주도만의 민속자연을 볼 수 있는 민속자연사박물관을 돌아보자.
+                    </p>
+
+                    <ul class="bar">
+                        <li>제주돌문화공원</li>
+                        <li> 만장굴</li>
+                        <li>성산일출봉</li>
+                        <li>제주도민속자연사박물관</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course1.jpg' %}">
+                        <img src="{% static 'images/course2.jpeg' %}">
+                        <img src="{% static 'images/course3.jpg' %}">
+                        <img src="{% static 'images/course4.jpg' %}">
+                    </div>
+                </div>
+
+                <div class="course-box">
+                    <h4>놀멍쉬멍 제주 바다 구경떠나기</h4>
+                    <p>가장 제주다운 풍경을 만날 수 있는 방법은 차편이나 걸어서 해안도로를 달려보는 것. 
+                        대자연의 너른 품에서 바름과 구름, 돌과 나무와 하늘을 길동무 삼아 달리며 심신의 
+                        여유와 자유로움을 마음껏 느껴보시길.
+                    </p>
+
+                    <ul class="bar">
+                        <li>사라봉공원</li>
+                        <li>관덕정</li>
+                        <li>용두암</li>
+                        <li>어영소 공원</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course5.jpg' %}">
+                        <img src="{% static 'images/course6.jpg' %}">
+                        <img src="{% static 'images/course7.jpg' %}">
+                        <img src="{% static 'images/course8.jpg' %}">
+                    </div>
+
+                </div>
+
+                <div class="course-box">
+                    <h4>있는 그대로 제주의 자연을 거닐어볼 코스</h4>
+                    <p>제주도의 아름다움은 ‘하늘부터 바다까지’ 모두라고 할 수 있다. 특히 제주의 자연그대로인
+                        원시림과 청정함을 맛보기 좋은 코스다. 한라산의 생태가 그대로 보존되어 있는 숲과
+                         노루공원 제주만의 특색있는 박물관을 돌아볼 좋은 기회가 될 것이다.
+                    </p>
+
+                    <ul class="bar">
+                        <li>한라생태숲</li>
+                        <li>제주 노루생태관찰원</li>
+                        <li>제주돌문화공원</li>
+                        <li>국립제주박물관</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course9.jpg' %}">
+                        <img src="{% static 'images/course10.jpg' %}">
+                        <img src="{% static 'images/course11.jpg' %}">
+                        <img src="{% static 'images/course12.jpg' %}">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="content2" class="tab-content info">
+                <div class="course-box">
+                    <h4>놀멍쉬멍 제주 바다 구경떠나기</h4>
+                    <p>가장 제주다운 풍경을 만날 수 있는 방법은 차편이나 걸어서 해안도로를 달려보는 것. 
+                        대자연의 너른 품에서 바름과 구름, 돌과 나무와 하늘을 길동무 삼아 달리며 심신의 
+                        여유와 자유로움을 마음껏 느껴보시길.
+                    </p>
+
+                    <ul class="bar">
+                        <li>사라봉공원</li>
+                        <li>관덕정</li>
+                        <li>용두암</li>
+                        <li>어영소 공원</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course5.jpg' %}">
+                        <img src="{% static 'images/course6.jpg' %}">
+                        <img src="{% static 'images/course7.jpg' %}">
+                        <img src="{% static 'images/course8.jpg' %}">
+                    </div>
+
+                </div>
+
+                <div class="course-box">
+                    <h4>제주도 세계자연유산 탐방 코스</h4>
+                    <p>제주도의 절묘한 자연경관과 특별한 맛을 느낄 수 있는 여행이다. 
+                    세계자연유산으로 등재된 만장굴과 돌과 더불어 살아 사는 제주인의 삶이 오롯이 녹아든 
+                    제주돌문화공원을 방문하고, 제주도만의 민속자연을 볼 수 있는 민속자연사박물관을 돌아보자.
+                    </p>
+
+                    <ul class="bar">
+                        <li>제주돌문화공원</li>
+                        <li> 만장굴</li>
+                        <li>성산일출봉</li>
+                        <li>제주도민속자연사박물관</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course1.jpg' %}">
+                        <img src="{% static 'images/course2.jpeg' %}">
+                        <img src="{% static 'images/course3.jpg' %}">
+                        <img src="{% static 'images/course4.jpg' %}">
+                    </div>
+                </div>
+
+                <div class="course-box">
+                    <h4>있는 그대로 제주의 자연을 거닐어볼 코스</h4>
+                    <p>제주도의 아름다움은 ‘하늘부터 바다까지’ 모두라고 할 수 있다. 특히 제주의 자연그대로인
+                        원시림과 청정함을 맛보기 좋은 코스다. 한라산의 생태가 그대로 보존되어 있는 숲과
+                         노루공원 제주만의 특색있는 박물관을 돌아볼 좋은 기회가 될 것이다.
+                    </p>
+
+                    <ul class="bar">
+                        <li>한라생태숲</li>
+                        <li>제주 노루생태관찰원</li>
+                        <li>제주돌문화공원</li>
+                        <li>국립제주박물관</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course9.jpg' %}">
+                        <img src="{% static 'images/course10.jpg' %}">
+                        <img src="{% static 'images/course11.jpg' %}">
+                        <img src="{% static 'images/course12.jpg' %}">
+                    </div>
+
+                </div>
+            </div>
+
+            
+            <div id="content3" class="tab-content info">
+                <div class="course-box">
+                    <h4>있는 그대로 제주의 자연을 거닐어볼 코스</h4>
+                    <p>제주도의 아름다움은 ‘하늘부터 바다까지’ 모두라고 할 수 있다. 특히 제주의 자연그대로인
+                        원시림과 청정함을 맛보기 좋은 코스다. 한라산의 생태가 그대로 보존되어 있는 숲과
+                         노루공원 제주만의 특색있는 박물관을 돌아볼 좋은 기회가 될 것이다.
+                    </p>
+
+                    <ul class="bar">
+                        <li>한라생태숲</li>
+                        <li>제주 노루생태관찰원</li>
+                        <li>제주돌문화공원</li>
+                        <li>국립제주박물관</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course9.jpg' %}">
+                        <img src="{% static 'images/course10.jpg' %}">
+                        <img src="{% static 'images/course11.jpg' %}">
+                        <img src="{% static 'images/course12.jpg' %}">
+                    </div>
+
+                </div>
+
+                <div class="course-box">
+                    <h4>제주도 세계자연유산 탐방 코스</h4>
+                    <p>제주도의 절묘한 자연경관과 특별한 맛을 느낄 수 있는 여행이다. 
+                    세계자연유산으로 등재된 만장굴과 돌과 더불어 살아 사는 제주인의 삶이 오롯이 녹아든 
+                    제주돌문화공원을 방문하고, 제주도만의 민속자연을 볼 수 있는 민속자연사박물관을 돌아보자.
+                    </p>
+
+                    <ul class="bar">
+                        <li>제주돌문화공원</li>
+                        <li> 만장굴</li>
+                        <li>성산일출봉</li>
+                        <li>제주도민속자연사박물관</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course1.jpg' %}">
+                        <img src="{% static 'images/course2.jpeg' %}">
+                        <img src="{% static 'images/course3.jpg' %}">
+                        <img src="{% static 'images/course4.jpg' %}">
+                    </div>
+                </div>
+
+                <div class="course-box">
+                    <h4>놀멍쉬멍 제주 바다 구경떠나기</h4>
+                    <p>가장 제주다운 풍경을 만날 수 있는 방법은 차편이나 걸어서 해안도로를 달려보는 것. 
+                        대자연의 너른 품에서 바름과 구름, 돌과 나무와 하늘을 길동무 삼아 달리며 심신의 
+                        여유와 자유로움을 마음껏 느껴보시길.
+                    </p>
+
+                    <ul class="bar">
+                        <li>사라봉공원</li>
+                        <li>관덕정</li>
+                        <li>용두암</li>
+                        <li>어영소 공원</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course5.jpg' %}">
+                        <img src="{% static 'images/course6.jpg' %}">
+                        <img src="{% static 'images/course7.jpg' %}">
+                        <img src="{% static 'images/course8.jpg' %}">
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div id="content4" class="tab-content info">
+                <div class="course-box">
+                    <h4>제주도 세계자연유산 탐방 코스</h4>
+                    <p>제주도의 절묘한 자연경관과 특별한 맛을 느낄 수 있는 여행이다. 
+                    세계자연유산으로 등재된 만장굴과 돌과 더불어 살아 사는 제주인의 삶이 오롯이 녹아든 
+                    제주돌문화공원을 방문하고, 제주도만의 민속자연을 볼 수 있는 민속자연사박물관을 돌아보자.
+                    </p>
+
+                    <ul class="bar">
+                        <li>제주돌문화공원</li>
+                        <li> 만장굴</li>
+                        <li>성산일출봉</li>
+                        <li>제주도민속자연사박물관</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course1.jpg' %}">
+                        <img src="{% static 'images/course2.jpeg' %}">
+                        <img src="{% static 'images/course3.jpg' %}">
+                        <img src="{% static 'images/course4.jpg' %}">
+                    </div>
+                </div>
+
+                <div class="course-box">
+                    <h4>놀멍쉬멍 제주 바다 구경떠나기</h4>
+                    <p>가장 제주다운 풍경을 만날 수 있는 방법은 차편이나 걸어서 해안도로를 달려보는 것. 
+                        대자연의 너른 품에서 바름과 구름, 돌과 나무와 하늘을 길동무 삼아 달리며 심신의 
+                        여유와 자유로움을 마음껏 느껴보시길.
+                    </p>
+
+                    <ul class="bar">
+                        <li>사라봉공원</li>
+                        <li>관덕정</li>
+                        <li>용두암</li>
+                        <li>어영소 공원</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course5.jpg' %}">
+                        <img src="{% static 'images/course6.jpg' %}">
+                        <img src="{% static 'images/course7.jpg' %}">
+                        <img src="{% static 'images/course8.jpg' %}">
+                    </div>
+
+                </div>
+
+                <div class="course-box">
+                    <h4>있는 그대로 제주의 자연을 거닐어볼 코스</h4>
+                    <p>제주도의 아름다움은 ‘하늘부터 바다까지’ 모두라고 할 수 있다. 특히 제주의 자연그대로인
+                        원시림과 청정함을 맛보기 좋은 코스다. 한라산의 생태가 그대로 보존되어 있는 숲과
+                         노루공원 제주만의 특색있는 박물관을 돌아볼 좋은 기회가 될 것이다.
+                    </p>
+
+                    <ul class="bar">
+                        <li>한라생태숲</li>
+                        <li>제주 노루생태관찰원</li>
+                        <li>제주돌문화공원</li>
+                        <li>국립제주박물관</li>
+                    </ul>
+
+                    <div class="course-images">
+                        <img src="{% static 'images/course9.jpg' %}">
+                        <img src="{% static 'images/course10.jpg' %}">
+                        <img src="{% static 'images/course11.jpg' %}">
+                        <img src="{% static 'images/course12.jpg' %}">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    {% endblock %}

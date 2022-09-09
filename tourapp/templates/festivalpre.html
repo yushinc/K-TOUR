@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+   <!-- 축제 페이지-->
+    <section class="festival" id="festival">
+        <div class= "festivalheader">
+            <img src="{% static 'images/festivalheader.jpg' %}">
+        </div>
+        
+        <div class="text3">
+            <h3>축제</h3>
+        </div>
+
+        <div class="select">
+            <button class="select-now" type="button" onclick="location.href='/festival'">개최중</button>
+            <button class="select-next" type="button" onclick="location.href='/festivalnext'">개최예정</button>
+            <button class="select-pre" type="button" onclick="location.href='/festivalpre'" style="background-color: var(--btn-darker); color: #d7fff1;">개최완료</button>
+        </div>
+        
+            <div id="posters-group1" class="posters-list">
+                    <li><img src="{% static 'poster/pre1.jpg' %}"><span1>─────<br></span1><span>2022 김포아라마린페스티벌<br>2022.07.30 ~ 2022.07.31</span></li>
+                    <li><img src="{% static 'poster/pre2.png' %}"><span1>─────<br></span1><span>제15회 부산항축제<br>2022.07.02 ~ 2022.07.03</span></li>
+                    <li><img src="{% static 'poster/pre3.jpg' %}"><span1>─────<br></span1><span>2022 대구컬러풀 페스티벌<br>2022.07.09 ~ 2022.07. 10</span></li>
+                    <li><img src="{% static 'poster/pre4.jpg' %}"><span1>─────<br></span1><span>제20회 조치원 복숭아축제<br>2022.07.29 ~ 2022.07.30</span></li>
+                    <li><img src="{% static 'poster/pre5.jpg' %}"><span1>─────<br></span1><span>제32회 전국무궁화수원축제<br>2022.07.29 ~ 2022.07.31</span></li>
+                    <li><img src="{% static 'poster/pre6.jpg' %}"><span1>─────<br></span1><span>2022 거제 바다로세계로<br>2022.07.29 ~ 2022.07.31</span></li>
+                    <li><img src="{% static 'poster/pre7.jpg' %}"><span1>─────<br></span1><span>제12회 진안고원 수박축제<br>2022.07.30 ~ 2022.07.31</span></li>
+                    <li><img src="{% static 'poster/pre8.jpg' %}"><span1>─────<br></span1><span>충주호수축제<br>2022.07.28 ~ 2022.07.31</span></li>
+                    <li><img src="{% static 'poster/pre9.jpg' %}"><span1>─────<br></span1><span>국제해양영화제<br>2022.07.28 ~ 2022.07.31</span></li>
+                    <li><img src="{% static 'poster/pre10.png' %}"><span1>─────<br></span1><span>제22회 밀양공연예술축제<br>2022.07.08 ~ 2022.07.29</span></li>
+                    <li><img src="{% static 'poster/pre11.jpg' %}"><span1>─────<br></span1><span>제19회 고마나루 국제 연극제<br>2022.07.02 ~ 2022.07.10</span></li>
+                    <li><img src="{% static 'poster/pre12.jpg' %}"><span1>─────<br></span1><span>2022 대구치맥페스티벌<br>2022.07.06 ~ 2022.07.10</span></li>
+            </div>
+    </section>
+    {% endblock %}
+    

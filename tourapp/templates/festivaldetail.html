@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- 상세 페이지 영역 -->
+    
+    <section class="festival" id="festival">
+       
+        <div class= "festivalheader">
+            <img src="{% static 'images/festivalheader.jpg' %}">
+        </div>
+        
+        <div class="text3">
+            <h3>축제</h3>
+        </div>
+       
+        <div class = "explan">
+            <div class="bigposter">
+                <img src="{% static 'poster/now1.jpg' %}">
+            </div>
+       
+            <div class="text4">
+                <span3>제15회 정남진 장흥 물축제</span3>
+                <span4>──────────</span4>
+            </div>
+       
+
+    
+
+            <table class="table">
+                <tr><th>주최</th><td>장흥군, 장흥 물축제 추진위원회</td></tr>
+                <tr><th>지역</th><td>전라남도 장흥군</td></tr>
+                <tr><th>장소</th><td>	전남 장흥군 장흥읍 우드랜드길 180 정남진편백숲우드랜드</td></tr>
+                <tr><th>기간</th><td>2022년 7월 30일(토) ~ 8월 7일(일)</td></tr>
+                <tr><th>요금</th><td>입장료 무료, 체험료 유료</td></tr>
+                <tr><th>문의전화</th><td>061-860-5771</td></tr>
+                <tr><th>홈페이지</th><td>https://www.jangheung.go.kr/festival</td></tr>
+            </table>
+       </div>
+        <div class="introduce">
+            <p1> 정남진 장흥물축제는 우리 군이 자랑하는 탐진강 하천, 장흥댐 호수, 득량만 해수 등 청정수자원 을 기반으로 하는 테마축제로 푸른 자연 못지않게<br>깨끗한 지역의 이미지를 안팎에 알림으로써 “관광객 증가 → 유기농 농산물 판매 촉진 및 문화유산 등 관광자원 홍보 → 관광수입증가”를 통한 지역결제<br> 활성화에 큰 목적을 두고 시작하였습니다.<br>정남진 장흥 물축제는 전국 어디서나 볼수있는 프로그램으로 구성된 공연, 전시 및 관람 위주의 전형적인 축제의 틀을 벗어나 뜨거운 여름 누구에게나<br>반갑고 친숙한 “물”을 주제로 하여 방문객들이 함께 어울릴 수 있는 다양한 프로그램을 운영하고 있습니다.<br>“물”이라는 하나의 테마로 모든 프로그램이 연결되어 있으며, 사람들은 깨끗한 자연과 건강한 삶, 그 속의 쉼이 있는 정남진 장흥을 흠뻑 느끼고 즐길 수<br> 있으며, 주 야간 계속되는 다채로운 프로그램은 어른에게는 바쁜 일상속에서 잊고 있었던 순수함을 되살려 줄 것이며 아이에게는 최고의 놀이터가 되어<br>줄 것입니다.<br>뿐만 아니라 문화체육관광부 선정 2022~2023년 문화관광지정축제로 선정되는 등 경쟁력 있는 대한민국 대표축제로 편백숲 우드랜드, 정남진 토요시장과<br>함께 장흥의 대표 브랜드로 자리매김 하였습니다.<br>지난 경험과 자신감에 힘입어 다가오는 7월 30일 부터 8월 7일까지 9일간 개최될 제 15회 정남진 장흥물축제는 많은 조언과 제안을 검토하여 축제 기반시설을<br>확충하고 방문객 모두가 함께 즐길 수 있는 프로그램 업그레이드에 집중과 준비를 하고 있습니다. 단순히 보고 즐기는 축제장이 아니라 깨끗한 자연과 순수한<br>사람들이 하나되는 건강한 행복 체험장이 될 것입니다.<br>짜릿한 즐거움과 낭만, 뜨거운 여름을 한방에 날려 버릴 최고의 휴식처!<br>뜨거운 열정과 웃음이 가득한 곳!<br>초록 자연의 상징 정남진 장흥으로 오십시오.</p1>
+       </div>
+    </section>
+    
+    <div class="con reply">
+        <section class="reply-form">
+            <form action="return false;">
+            <div>
+                <input type="text">
+            </div>
+            <div>
+                <textarea></textarea>
+                <input type="submit">
+            </div>
+            </form>
+        </section>
+
+
+        <section class="reply-list table-common">
+            <table border="1">
+            <colgroup>
+                <col width="100px">
+            </colgroup>
+                <tbody>
+                    <tr>
+                        <td>익명</td>
+                        <td>정말 기대됩니다</td>
+                    </tr>
+                    <tr>
+                        <td>익명</td>
+                        <td>우와~</td>
+                    </tr>
+                    <tr>
+                        <td>익명</td>
+                        <td>저번에 갔었는데 재밌었어요</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    {% endblock %}
+    
+    
+    

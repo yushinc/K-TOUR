@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --header-height: 3rem;
+
+    /*---------색상---------*/
+    --hue-color: ;
+
+    --white: #FFF;
+    --btn-darker: #315A72;
+    --btn-color: #659DBD;
+    --text-color: #0A0A09;
+
+    /*---------폰트---------*/
+    --font: 'Montserrat', sans-serif;
+    --normal-font-size: .938rem;
+
+    /*---------폰트 두께---------*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+}
+
+li{ list-style: none; } 
+a{ text-decoration: none; } 
+button{ cursor: pointer; }
+
+* {
+    font-family: var(--font);
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--btn-color);
+    border-radius: 3rem;
+}
+
+body {
+    background: var(--white);
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--font);
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+}
+
+button, input {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+/* HEADER */
+
+
+.header .header-1 {
+    padding: 1rem 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-1 .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.header .header-1 .logo img {
+    height: 2rem;
+    margin: 0 1rem;
+}
+
+.header .header-1 .search-form {
+    display: flex;
+    align-items: center;
+    width: 60rem;
+    height: 5rem;
+    overflow: hidden;
+    margin-left: 5rem;
+    background: whitesmoke;
+    border-radius: 1rem;
+}
+
+.header .header-1 .search-form  input {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    background: none;
+}
+
+.header .header-1 .search-form label {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.header .header-1 .search-form label:hover {
+    color: var(--btn-color);
+}
+
+.header .header-1 .login button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 2rem;
+    border: none;
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    margin-right: .5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.header .header-1 .login button:hover {
+    background-color: var(--btn-darker);
+}
+
+/* 로그인 폼*/
+
+.loginbox {
+    width: 700px; height: 550px;
+    margin: 50px auto;
+}
+
+.loginbox h2 {
+    width: 100%;
+    height: 100px; line-height: 100px;
+    text-align: center; 
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.loginbox form {
+    width: 100%; height: 450px;
+    background-color: whitesmoke;
+    border-radius: 1.5rem;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.loginbox fieldset {
+    border: none;
+}
+
+.loginbox legend {  /* 보이지 않게 화면 밖으로 */
+    position: absolute;
+    left: -999em;
+}
+
+.loginbox label{
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.loginbox input{
+    display: block;
+    width: 100%; height: 50px;
+    margin-bottom: 25px;
+    border: none; 
+    border-radius: 1.5rem;
+    background-color: var(--white);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.loginbox ul{
+    width: 100%;
+    text-align: right;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.loginbox li{
+    display: inline-block;
+    height: 12px; line-height: 12px;
+}
+
+.loginbox li:last-child{
+    border-left: 1px solid #333;
+    padding-left: 10px;
+    margin-left: 4px;
+}
+
+.loginbox a{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    position: relative; top: -2px;
+}
+
+.loginbox button{
+    display: block;
+    width: 200px; height: 50px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--btn-color);
+    color: #fff; 
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+.loginbox button:hover {
+    background-color: var(--btn-darker);
+}
+
+
+/* 회원가입 폼*/
+
+.signupbox {
+    width: 700px; height: 850px;
+    margin: 50px auto;
+}
+
+.signupbox h2 {
+    width: 100%;
+    height: 100px; line-height: 100px;
+    text-align: center; 
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.signupbox form {
+    width: 100%; height: 650px;
+    background-color: whitesmoke;
+    border-radius: 1.5rem;
+    padding: 60px;
+    box-sizing: border-box;
+}
+
+.signupbox fieldset {
+    border: none;
+}
+
+.signupbox legend {  /* 보이지 않게 화면 밖으로 */
+    position: absolute;
+    left: -999em;
+}
+
+.signupbox label{
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.signupbox input{
+    display: block;
+    width: 100%; height: 50px;
+    margin-bottom: 25px;
+    border: none; 
+    border-radius: 1.5rem;
+    background-color: var(--white);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.signupbox ul{
+    width: 100%;
+    text-align: right;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.signupbox li{
+    display: inline-block;
+    height: 12px; line-height: 12px;
+}
+
+.signupbox li:last-child{
+    border-left: 1px solid #333;
+    padding-left: 10px;
+    margin-left: 4px;
+}
+
+.signupbox a{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    position: relative; top: -2px;
+}
+
+.signupbox button{
+    display: block;
+    width: 200px; height: 50px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--btn-color);
+    color: #fff; 
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+.signupbox button:hover {
+    background-color: var(--btn-darker);
+}
+
+
