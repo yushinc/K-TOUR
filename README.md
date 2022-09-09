@@ -9,8 +9,8 @@ python manage.py runserver
 ```
 를 통해 서버를 실행시키면 됩니다.
 
-myproject > accounts 
-myproject > myproject > urls.py 일부
-myproject > tourapp > templates > forms.py, models.py, view.py 일부
+myproject > accounts <br>
+myproject > myproject > urls.py 일부 <br>
+myproject > tourapp > templates > forms.py, models.py, view.py 일부 <br>
 
 를 제작하였습니다.
